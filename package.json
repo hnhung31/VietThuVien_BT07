@@ -1,13 +1,29 @@
 {
-  "name": "HNhung/my-shopping-cart-lib",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "@hnhung/my-shopping-cart-lib",
+   "private": false, 
+  "version": "0.0.1", 
+  "description": "Một thư viện giỏ hàng đơn giản được tạo bằng React và Vite.",
+  "main": "./dist/my-shopping-cart-lib.umd.js", 
+  "module": "./dist/my-shopping-cart-lib.es.js",
+  "types": "./dist/index.d.ts", 
+  "files": [ 
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/my-shopping-cart-lib.es.js",
+      "require": "./dist/my-shopping-cart-lib.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "tsc && vite build", 
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+  },
+  "peerDependencies": { 
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -15,7 +31,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@types/node": "^24.3.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -25,7 +40,6 @@
     "globals": "^16.3.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2",
-    "vite-plugin-dts": "^4.5.4"
+    "vite": "^7.1.2"
   }
 }
