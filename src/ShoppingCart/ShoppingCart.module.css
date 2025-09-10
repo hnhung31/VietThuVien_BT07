@@ -1,0 +1,47 @@
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityInput {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #eee;
+  font-size: 1.2rem;
+}
